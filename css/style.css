@@ -1,16 +1,21 @@
 html {
   font-size: 20px;
   font-family: 'Quintessential', cursive;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+body {
+  background-color: #232323;
 }
 
 .bg-video {
-  
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   height: 100%;
   width: 100%;
+  opacity: .5;
   overflow: hidden;
 }
 
@@ -18,7 +23,6 @@ html {
   height: 100%;
   width: 100%;
   object-fit: cover;
-
 }
 
 .container {
@@ -27,14 +31,16 @@ html {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   position: relative;
 }
 
 .main-heading {
+  font-weight: 300;
   font-family: 'Tangerine', cursive;
   font-size: 3rem;
+  text-transform: capitalize;
   position: absolute;
   top: 2rem;
   left: 50%;
@@ -43,6 +49,8 @@ html {
 
 .quote-box {
   line-height: 2rem;
+  letter-spacing: 2px;
+  word-spacing: .5rem;
   display: flex;
   flex-direction: column;
   text-align: center;
