@@ -3,6 +3,24 @@ html {
   font-family: 'Quintessential', cursive;
 }
 
+.bg-video {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
 .container {
   min-height: 100vh;
   display: flex;
