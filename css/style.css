@@ -25,7 +25,7 @@ body {
   overflow: hidden;
 }
 
-.bg-video__content {
+.bg-video-content {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -60,7 +60,6 @@ body {
   justify-content: center;
   text-align: center;
   min-height: 70vh;
-  /*transition: opacity .7s;*/
 }
 
 .quote-author { font-size: 1.8rem; }
