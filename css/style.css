@@ -1,8 +1,8 @@
 html {
   font-size: 20px;
-  /*font-family: 'Quintessential', cursive;*/
+  font-family: 'Vollkorn SC', serif;
   color: #fff;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
 }
 body {
   background-color: #232323;
@@ -39,13 +39,15 @@ body {
 .main-heading {
   font-weight: 300;
   font-family: 'Tangerine', cursive;
-  font-size: 3rem;
+  font-size: 4rem;
   text-transform: capitalize;
   text-align: center;
   margin-top: 4rem;
+  margin-bottom: 0;
 }
 
 .quote-box {
+  font-size: 1.3rem;
   line-height: 2rem;
   letter-spacing: 2px;
   word-spacing: .5rem;
@@ -56,35 +58,37 @@ body {
   min-height: 70vh;
 }
 
-.quote-author { font-size: 1.2rem; }
+.quote-author { font-size: 1.8rem; }
 
 .buttons-box {
   position: fixed;
   top: 50%;
   right: 5rem;
+  transform: translateY(-50%);
 }
 
 .btn,
 .btn:link,
 .btn:visited {
-  color: rgba(255, 255, 255, .2);
+  color: rgba(255, 255, 255, .5);
   font-size: 2rem;
+  font-weight: bold;
   text-decoration: none;
   border: none;
   outline: none;
   font-family: inherit;
   padding: 1.5rem 1.5rem;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, .4);
   border-radius: 5px;
-  transition: all .2s;
+  transition: color .2s, background-color .2s, transform .1s;
   cursor: pointer;
 }
 
 .btn:hover {
   color: rgba(255, 255, 255, .3);
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, .7);
 }
 
 .btn:active {
-  transform: translateY(2px);
+  transform: scale(.95);
 }
