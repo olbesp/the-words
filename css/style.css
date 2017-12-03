@@ -60,15 +60,7 @@ body {
   justify-content: center;
   text-align: center;
   min-height: 70vh;
-  transition: opacity .7s;
-}
-
-.quote-fadeIn {
-  opacity: 1;
-}
-
-.quote-fadeOut {
-  opacity: 0;
+  /*transition: opacity .7s;*/
 }
 
 .quote-author { font-size: 1.8rem; }
