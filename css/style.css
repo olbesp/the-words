@@ -5,9 +5,13 @@ html {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
 }
 body {
-  background-color: #232323;
+  background-image: linear-gradient(to left bottom, rgb(166, 113, 58), rgb(6, 92, 140));
   position: relative;
   min-height: 100vh;
+}
+
+::selection {
+  background-color: #39852a;
 }
 
 .bg-video {
@@ -17,7 +21,7 @@ body {
   z-index: -1;
   height: 100%;
   width: 100%;
-  opacity: .5;
+  opacity: .2;
   overflow: hidden;
 }
 
@@ -86,7 +90,7 @@ body {
 
 .btn:hover {
   color: rgba(255, 255, 255, .3);
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, .6);
 }
 
 .btn:active {
