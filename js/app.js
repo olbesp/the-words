@@ -32,4 +32,11 @@ $(document).ready(function() {
     getNextQuote();
   });
 
+  $('#tweetBtn').on('click', function() {
+    var currentQuote = $('#quote-content').text();
+    var currentAuthor = $('#quote-title').text();
+    var tweet = 'https://twitter.com/intent/tweet?text=' + currentQuote + ' (' + currentAuthor + ')';
+    $(this).attr('href', tweet);
+  });
+
 });
