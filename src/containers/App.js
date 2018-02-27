@@ -5,6 +5,7 @@ import axios from 'axios';
 import Header from '../components/Header/Header';
 import QuoteBox from '../components/QuoteBox/QuoteBox';
 import Controls from '../components/Controls/Controls';
+import Background from '../components/Background/Background';
 
 const url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback='
 
@@ -45,6 +46,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Background />
         <Header />
         <QuoteBox quote={this.createQuote()} author={this.state.author} />
         <Controls getQuote={this.getQuote} tweet={this.tweetQuote} />

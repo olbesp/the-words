@@ -1,0 +1,16 @@
+.Background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  opacity: .4;
+  overflow: hidden;
+}
+
+.Background video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
