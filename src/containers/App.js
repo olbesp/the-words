@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+
 import './App.css';
 import axios from 'axios';
+import Header from '../components/Header/Header';
 
 const url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback='
 
@@ -32,8 +34,9 @@ class App extends Component {
 
   render() {
     return (
-      <div dangerouslySetInnerHTML={this.createQuote()} className="App">
-        
+      <div className="App">
+        <Header />
+        <div dangerouslySetInnerHTML={this.createQuote()}></div>
       </div>
     );
   }
