@@ -4,8 +4,8 @@ import './QuoteBox.css';
 
 const quoteBox = (props) => (
   <main className="QuoteBox">
-    <div dangerouslySetInnerHTML={props.quote}></div>
-    <div>{props.author}</div>
+    <div id="quote" dangerouslySetInnerHTML={props.quote}></div>
+    <div id="author">{props.author}</div>
   </main>
 );
 
