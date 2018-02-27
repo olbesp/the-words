@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import Header from '../components/Header/Header';
+import QuoteBox from '../components/QuoteBox/QuoteBox';
 
 const url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback='
 
@@ -36,7 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <div dangerouslySetInnerHTML={this.createQuote()}></div>
+        <QuoteBox quote={this.createQuote()} author={this.state.author} />
       </div>
     );
   }
