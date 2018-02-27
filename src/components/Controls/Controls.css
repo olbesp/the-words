@@ -13,27 +13,53 @@
   justify-content: center;
   outline: none;
   border: 0;
-  border-radius: 10px;
   text-decoration: none;
   margin: 0 1.5rem;
   width: 9rem;
   height: 3rem;
   color: white;
   font-size: 1.25rem;
-  background-color: #5bbbbb;
-  box-shadow: 0 6px #223f4d;
+  background-color: #525252;
+  box-shadow: 0 6px #272727;
   transition: all .1s;
   cursor: pointer;
 }
 
 .Controls *:hover {
-  background-color: #18878f;
+  background-color: #414141;
   transform: translateY(2px);
-  box-shadow: 0 4px #1d363b;
+  box-shadow: 0 4px #272727;
 }
 
 .Controls *:active {
-  background-color: #1c6977;
+  background-color: #353535;
   transform: translateY(4px);
-  box-shadow: 0 2px #2c2c2c;
+  box-shadow: 0 2px #272727;
+}
+
+@media (min-width: 600px) and (min-height: 450px) {
+  .Controls { margin: 2.5rem auto; }
+  .Controls * {
+    width: 11rem;
+    height: 3.5rem;
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) and (min-height: 600px) {
+  .Controls { margin: 3rem auto; }
+  .Controls * {
+    width: 14rem;
+    height: 4rem;
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Controls { margin: 4.5rem auto; }
+  .Controls * {
+    width: 17rem;
+    height: 5rem;
+    font-size: 2.75rem;
+  }
 }

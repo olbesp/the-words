@@ -2,8 +2,24 @@
   text-align: center;
   padding: 0 3rem;
   font-size: 1.75rem;
+  max-width: 850px;
+  line-height: 150%;
+  letter-spacing: 2px;
+  word-spacing: 1rem;
 }
 
 .QuoteBox * {
-  margin: 1.5rem 0;
+  margin: 2.5rem 0;
+}
+
+@media (min-width: 600px) and (min-height: 450px) {
+  .QuoteBox { font-size: 2rem; }
+}
+
+@media (min-width: 768px) and (min-height: 600px) {
+  .QuoteBox { font-size: 2.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .QuoteBox { font-size: 3rem; }
 }

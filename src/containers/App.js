@@ -11,30 +11,35 @@ const url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filte
 
 class App extends Component {
   state = {
-    quoteHTML: null,
+    quote: null,
     author: null
   }
 
   getQuote = () => {
     axios.get(url)
     .then(response => {
-      const quoteHTML = response.data[0].content;
+      const quote = response.data[0].content;
       const author = response.data[0].title;
       this.setState({
-        quoteHTML,
+        quote,
         author
       });
     });
   }
 
   createQuote = () => {
-    return { __html: this.state.quoteHTML };
+    return { __html: this.state.quote };
+  }
+
+  createAuthor = () => {
+    return { __html: this.state.author };
   }
 
   tweetQuote = () => {
-    if (this.state.quoteHTML) {
+    if (this.state.quote) {
       const quote = document.getElementById('quote').textContent;
-      const twitterLink = `https://twitter.com/intent/tweet?text=${quote} - ${this.state.author}`;
+      const author = document.getElementById('author').textContent;
+      const twitterLink = `https://twitter.com/intent/tweet?text=${quote} - ${author}`;
       document.getElementById('tweetBtn').setAttribute('href', twitterLink);
     }
   }
@@ -48,7 +53,7 @@ class App extends Component {
       <div className="App">
         <Background />
         <Header />
-        <QuoteBox quote={this.createQuote()} author={this.state.author} />
+        <QuoteBox quote={this.createQuote()} author={this.createAuthor()} />
         <Controls getQuote={this.getQuote} tweet={this.tweetQuote} />
       </div>
     );
