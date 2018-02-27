@@ -1,0 +1,38 @@
+.Controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Controls * {
+  font-family: inherit;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  width: 9rem;
+  height: 3rem;
+  color: white;
+  font-size: 1.25rem;
+  background-color: #5bbbbb;
+  box-shadow: 0 6px #223f4d;
+  transition: all .1s;
+  cursor: pointer;
+}
+
+.Controls *:hover {
+  background-color: #18878f;
+  transform: translateY(2px);
+  box-shadow: 0 4px #1d363b;
+}
+
+.Controls *:active {
+  background-color: #1c6977;
+  transform: translateY(4px);
+  box-shadow: 0 2px #2c2c2c;
+}
