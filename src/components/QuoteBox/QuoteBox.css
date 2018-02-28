@@ -6,6 +6,8 @@
   line-height: 150%;
   letter-spacing: 2px;
   word-spacing: 1rem;
+  transition: all .4s;
+  
 }
 
 .QuoteBox * {

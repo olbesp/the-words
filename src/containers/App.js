@@ -6,6 +6,7 @@ import Header from '../components/Header/Header';
 import QuoteBox from '../components/QuoteBox/QuoteBox';
 import Controls from '../components/Controls/Controls';
 import Background from '../components/Background/Background';
+import Loader from '../components/Loader/Loader';
 
 const url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback='
 
@@ -20,9 +21,11 @@ class App extends Component {
     .then(response => {
       const quote = response.data[0].content;
       const author = response.data[0].title;
-      this.setState({
-        quote,
-        author
+      this.setState(prevState => {
+        return {
+          quote,
+          author
+        };
       });
     });
   }
@@ -53,7 +56,11 @@ class App extends Component {
       <div className="App">
         <Background />
         <Header />
-        <QuoteBox quote={this.createQuote()} author={this.createAuthor()} />
+        {
+          !this.state.quote ? 
+          <Loader /> :
+          <QuoteBox quote={this.createQuote()} author={this.createAuthor()} />
+        }
         <Controls getQuote={this.getQuote} tweet={this.tweetQuote} />
       </div>
     );
