@@ -8,7 +8,7 @@ import Controls from '../components/Controls/Controls';
 import Background from '../components/Background/Background';
 import Loader from '../components/Loader/Loader';
 
-const url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback='
+const url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
 
 class App extends Component {
   state = {
@@ -19,13 +19,9 @@ class App extends Component {
   getQuote = () => {
     axios.get(url)
     .then(response => {
-      const quote = response.data[0].content;
-      const author = response.data[0].title;
-      this.setState(prevState => {
-        return {
-          quote,
-          author
-        };
+      this.setState({
+        quote: response.data[0].content,
+        author: response.data[0].title
       });
     });
   }
