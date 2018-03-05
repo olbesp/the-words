@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   getQuote = () => {
-    axios.get(url)
+    axios.get(`${url}_=${Date.now()}`)
     .then(response => {
       this.setState({
         quote: response.data[0].content,
@@ -47,6 +47,10 @@ class App extends Component {
     this.getQuote();
   }
 
+  nextQuoteHandler = () => {
+    this.getQuote();
+  }
+
   render() {
     return (
       <div className="App">
@@ -57,7 +61,7 @@ class App extends Component {
           <Loader /> :
           <QuoteBox quote={this.createQuote()} author={this.createAuthor()} />
         }
-        <Controls getQuote={this.getQuote} tweet={this.tweetQuote} />
+        <Controls getQuote={this.nextQuoteHandler} tweet={this.tweetQuote} />
       </div>
     );
   }
